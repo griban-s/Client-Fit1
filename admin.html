@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>ГдеМои — Настройки</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">
+        <img src="assets/gdemoi-logo 16.png" alt="Логотип" />
+      </a>
+      <nav class="site-nav">
+        <a class="nav-link" href="index.html">Решения</a>
+        <a class="nav-link" href="configurator.html">Конфигуратор</a>
+        <a class="nav-link" href="specs.html">Технические характеристики</a>
+      </nav>
+      <div class="header-actions">
+        <div class="header-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M15.5 14h-.79l-.28-.27A6 6 0 1 0 14 15.5l.27.28v.79l5 5 1.5-1.5-5-5ZM10 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z"
+            />
+          </svg>
+          <input
+            type="search"
+            placeholder="Поиск решений"
+            aria-label="Поиск решений"
+            data-global-search
+          />
+        </div>
+        <a class="settings-toggle" href="admin.html" aria-label="Настройки">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.35 7.35 0 0 0-1.63-.94l-.36-2.54a.5.5 0 0 0-.5-.42h-3.84a.5.5 0 0 0-.5.42l-.36 2.54a7.35 7.35 0 0 0-1.63.94l-2.39-.96a.5.5 0 0 0-.6.22L2.71 8.84a.5.5 0 0 0 .12.64l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94L2.83 14.5a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .6.22l2.39-.96c.5.38 1.05.7 1.63.94l.36 2.54a.5.5 0 0 0 .5.42h3.84a.5.5 0 0 0 .5-.42l.36-2.54c.58-.24 1.13-.56 1.63-.94l2.39.96a.5.5 0 0 0 .6-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.56ZM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5Z"
+            />
+          </svg>
+        </a>
+        <button class="theme-toggle" type="button" data-theme-toggle>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a1 1 0 0 1 1 1v2.1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm8-5a1 1 0 0 1 1 1v2.1a1 1 0 1 1-2 0V15a1 1 0 0 1 1-1ZM4 15a1 1 0 0 1 1 1v2.1a1 1 0 1 1-2 0V16a1 1 0 0 1 1-1Zm14.95-8.95a1 1 0 0 1 1.41 1.41l-1.48 1.48a1 1 0 0 1-1.41-1.41l1.48-1.48ZM5.12 18.88a1 1 0 0 1 1.41 0l1.48 1.48a1 1 0 1 1-1.41 1.41l-1.48-1.48a1 1 0 0 1 0-1.41Zm13.83 1.41a1 1 0 0 1-1.41 0l-1.48-1.48a1 1 0 1 1 1.41-1.41l1.48 1.48a1 1 0 0 1 0 1.41ZM6.6 7.48a1 1 0 0 1-1.41 0L3.7 5.99A1 1 0 1 1 5.11 4.6l1.48 1.48a1 1 0 0 1 0 1.41Z"
+            />
+          </svg>
+          <span data-theme-label>Тема</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="admin-page-head">
+        <h1 class="page-title">Настройки</h1>
+        <div class="admin-data-tools">
+          <button type="button" class="admin-ghost" data-admin-export>
+            Экспорт данных
+          </button>
+          <button type="button" class="admin-ghost" data-admin-import>
+            Импорт данных
+          </button>
+          <input
+            type="file"
+            accept="application/json"
+            data-admin-import-file
+            class="admin-hidden-input"
+          />
+        </div>
+      </div>
+      <div class="admin-layout">
+        <aside class="admin-sidebar">
+          <div class="admin-menu">
+            <button type="button" class="is-active" data-admin-nav="catalog">
+              Каталог
+            </button>
+            <button type="button" data-admin-nav="categories">Разделы</button>
+            <button type="button" data-admin-nav="subsections">Подразделы</button>
+            <button type="button" data-admin-nav="products">Решения</button>
+          </div>
+        </aside>
+        <div class="admin-content">
+          <section class="admin-section-view is-active" data-admin-section="catalog">
+            <h2>Разделы каталога</h2>
+            <div class="admin-table-toolbar">
+              <input
+                type="text"
+                class="admin-search"
+                data-admin-category-search
+                placeholder="Поиск по разделам"
+              />
+              <button
+                class="admin-add admin-add-inline"
+                type="button"
+                data-admin-category-add
+                aria-label="Добавить раздел"
+              >
+                +
+              </button>
+            </div>
+            <form class="admin-form admin-form-collapsible" data-admin-category-form>
+              <input type="text" name="name" placeholder="Название раздела" required />
+              <input type="text" name="icon" placeholder="Ссылка на иконку" />
+            </form>
+            <div class="admin-table" data-admin-categories></div>
+          </section>
+
+          <section class="admin-section-view" data-admin-section="categories">
+            <h2>Разделы</h2>
+            <select class="admin-select" data-admin-subcategory-category></select>
+            <div class="admin-table-toolbar">
+              <input
+                type="text"
+                class="admin-search"
+                data-admin-subcategory-search
+                placeholder="Поиск по категориям"
+              />
+              <button
+                class="admin-add admin-add-inline"
+                type="button"
+                data-admin-subcategory-add
+                aria-label="Добавить категорию"
+              >
+                +
+              </button>
+            </div>
+            <form
+              class="admin-form admin-form-collapsible"
+              data-admin-subcategory-form
+            >
+              <input type="text" name="name" placeholder="Название категории" required />
+            </form>
+            <div class="admin-table" data-admin-subcategories></div>
+          </section>
+
+          <section class="admin-section-view" data-admin-section="subsections">
+            <h2>Подразделы</h2>
+            <div class="admin-subsection-selects">
+              <select class="admin-select" data-admin-subsection-category></select>
+              <select class="admin-select" data-admin-subsection-subcategory></select>
+            </div>
+            <div class="admin-table-toolbar">
+              <input
+                type="text"
+                class="admin-search"
+                data-admin-subsection-search
+                placeholder="Поиск по подразделам"
+              />
+              <button
+                class="admin-add admin-add-inline"
+                type="button"
+                data-admin-subsection-add
+                aria-label="Добавить подраздел"
+              >
+                +
+              </button>
+            </div>
+            <form class="admin-form admin-form-collapsible" data-admin-subsection-form>
+              <input type="text" name="name" placeholder="Название подраздела" required />
+            </form>
+            <div class="admin-table" data-admin-subsections></div>
+          </section>
+
+          <section class="admin-section-view" data-admin-section="products">
+            <h2>Решения</h2>
+            <div class="admin-table-toolbar">
+              <input
+                type="text"
+                class="admin-search"
+                data-admin-product-search
+                placeholder="Поиск по товарам"
+              />
+              <select class="admin-select admin-group-select" data-admin-product-group>
+                <option value="none">Без группировки</option>
+                <option value="category">Группировать по каталогу</option>
+                <option value="subcategory">Группировать по разделу</option>
+              </select>
+              <button
+                class="admin-add admin-add-inline"
+                type="button"
+                data-admin-product-add
+                aria-label="Добавить устройство"
+              >
+                +
+              </button>
+            </div>
+            <div class="admin-table" data-admin-products></div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div class="admin-modal" data-admin-product-modal>
+      <div class="admin-modal-card" role="dialog" aria-modal="true" aria-label="Новое решение">
+        <h2 data-admin-product-title>Новое решение</h2>
+        <form class="admin-form admin-form-rows" data-admin-product-form>
+          <input type="hidden" name="productId" />
+          <label>Название решения</label>
+          <input type="text" name="title" required />
+
+          <label>Описание</label>
+          <textarea name="description" rows="3" required></textarea>
+          <div class="admin-text-toolbar">
+            <button
+              type="button"
+              class="admin-text-btn admin-text-btn-link"
+              data-text-link="description"
+              aria-label="Ссылка"
+            ></button>
+          </div>
+          <input type="hidden" name="image" data-admin-product-image />
+          <input type="hidden" name="image2" data-admin-product-image-2 />
+
+          <label>Каталог</label>
+          <select name="category" class="admin-select" data-admin-product-category required></select>
+
+          <label>Раздел</label>
+          <select name="subcategory" class="admin-select" data-admin-product-subcategory required></select>
+
+          <label>Подраздел</label>
+          <select name="subsection" class="admin-select" data-admin-product-subsection></select>
+
+          <label>Характеристики</label>
+          <textarea name="characteristics" rows="3" placeholder="Каждая строка — отдельный пункт"></textarea>
+          <div class="admin-text-toolbar">
+            <button
+              type="button"
+              class="admin-text-btn admin-text-btn-link"
+              data-text-link="characteristics"
+              aria-label="Ссылка"
+            ></button>
+          </div>
+
+          <label>Теги</label>
+          <div class="admin-checklist">
+            <div class="admin-checklist-input">
+              <input type="text" name="featureInput" placeholder="Добавить тег" />
+              <button type="button" class="admin-ghost" data-admin-feature-add>Добавить</button>
+            </div>
+            <div class="admin-checklist-list" data-admin-feature-list></div>
+          </div>
+
+          <label>Фото</label>
+          <input type="file" name="imageFile" accept="image/*" />
+          <button
+            type="button"
+            class="admin-ghost admin-image-clear"
+            data-admin-image-clear
+          >
+            Удалить фото
+          </button>
+
+          <label>Фото 2</label>
+          <input type="file" name="imageFile2" accept="image/*" />
+          <button
+            type="button"
+            class="admin-ghost admin-image-clear"
+            data-admin-image2-clear
+          >
+            Удалить фото 2
+          </button>
+
+          <div class="admin-modal-actions">
+            <button class="admin-primary" type="submit">Сохранить</button>
+            <button class="admin-ghost" type="button" data-admin-product-cancel>Отменить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
